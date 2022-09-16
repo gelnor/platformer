@@ -1,33 +1,18 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://blocks/Block.tscn" type="PackedScene" id=2]
+[ext_resource path="res://world/TileMap.tscn" type="PackedScene" id=2]
 
 [node name="World" type="Node2D"]
 
-[node name="Block" parent="." instance=ExtResource( 2 )]
-position = Vector2( 9, 171 )
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 36, 73 )
+JUMP_FORCE = -160
+JUMP_RELEASE_FORCE = -40
+MAX_SPEED = 75
+GRAVITY = 5
+FALL_GRAVITY = 3
 
-[node name="Block2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 27, 171 )
-
-[node name="Block3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 45, 171 )
-
-[node name="Block4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 63, 171 )
-
-[node name="Block5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 81, 171 )
-
-[node name="Block6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 99, 171 )
-
-[node name="Block7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 117, 171 )
-
-[node name="Block8" parent="." instance=ExtResource( 2 )]
-position = Vector2( 117, 171 )
-
-[node name="Player" parent="Block8" instance=ExtResource( 1 )]
-position = Vector2( -85, -108 )
+[node name="TileMap" parent="." instance=ExtResource( 2 )]
+position = Vector2( 25, 127 )
+tile_data = PoolIntArray( 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 13, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65549, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0 )
